@@ -1,0 +1,37 @@
+* {
+  margin: 0 auto;
+  border: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+b {
+  font-weight: bold;
+}
+
+p {
+  margin: 1em;
+}
+
+a {
+  text-decoration: none;
+  cursor: auto;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*HEAD*/
+header {
+}
+
+/*MAIN*/
+main {
+}
+
+/*FOOTER*/
+footer {
+}
