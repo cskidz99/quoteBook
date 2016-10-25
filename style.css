@@ -1,37 +1,68 @@
-* {
-  margin: 0 auto;
-  border: none;
+body {
+  background-image: url('img/quoteBook_background.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
 }
 
-html {
-  box-sizing: border-box;
+header {
+  padding-top: 20px;
+  margin-bottom: 30vh;
+  background: linear-gradient(tan, transparent);
+  margin-top: 0;
+
 }
 
-b {
-  font-weight: bold;
+h1 {
+  text-align: center;
+  font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+  color: white;
+  font-size: 100px;
+  font-weight: 300px;
+  padding-top: 0;
+}
+
+.quote {
+  text-align: center;
+  font-family: cursive;
+  color: black;
+  font-size: 20px;
+}
+
+.input-boxes {
+  opacity: .75;
+  display: flex;
+  justify-content: center;
+}
+
+.input-boxes:hover {
+  opacity: 1;
+}
+
+input {
+    margin-right: 20px;
+}
+
+.filter-boxes {
+  opacity: .75;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-boxes:hover {
+  opacity: 1;
 }
 
 p {
-  margin: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  /*background: radial-gradient(circle closest-side, grey, transparent);*/
 }
 
-a {
-  text-decoration: none;
-  cursor: auto;
+.delete-button {
+  background-color: transparent;
+  border-radius: 50%;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/*HEAD*/
-header {
-}
-
-/*MAIN*/
-main {
-}
-
-/*FOOTER*/
-footer {
+.delete-button:hover {
+  background-color: salmon;
 }

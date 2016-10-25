@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html ng-app="quoteBook">
-  <head>
+
+<head>
     <title>
-      QuoteBook Demo
+        QuoteBook Demo
     </title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body ng-controller="mainCtrl">
+</head>
 
-    <input type="text" placeholder="Add new quote!" ng-model='newQuoteText'>
-     <input type="text" placeholder="Quotes author!" ng-model='newQuoteAuthor'>
-     <button ng-click="addQuote()">Add Quote</button>
-     <div>
-       Filter Quote: <input type="text" ng-model='filterText.text'/>
-       Filter Author: <input type="text" ng-model='filterText.author'/>
-     </div>
+<body ng-controller="mainCtrl">
+  <header>
+    <h1>QuoteBook</h1>
+    <div class="input-boxes">
+        <input type="text" placeholder="Add new quote!" ng-model='newQuoteText' keyBind="addQuote()">
+        <input type="text" placeholder="Who's the author?" ng-model='newQuoteAuthor'>
+        <button ng-click="addQuote()">Add Quote</button>
+    </div>
+    <div class='filter-boxes'>
+        <input type="text" ng-model='filterText.text' placeholder="Filter Quote:"/>
+        <input type="text" ng-model='filterText.author' placeholder="Filter Author:"/>
+    </div>
+  </header>
 
-    <p ng-repeat="quote in quotes | filter: filterText track by $index">
-      <span class='text'>{{quote.text}}</span>
-      <span class='author'> -- {{quote.author}}</span>
-      <button ng-click="deleteMe(quote.text)">Delete</button>
-    </p>
+  <main>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/mainCtrl.js"></script>
-  <script src="js/dataService.js"></script>
-  </body>
+
+
+
+        <p class="quote" ng-repeat="quote in quotes | filter: filterText track by $index">
+            <span class='text'>{{quote.text}}</span><br>
+            <span class='author'> -- {{quote.author}}</span>
+            <button class="delete-button" ng-click="deleteMe(quote.text)">x</button>
+        </p>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/mainCtrl.js"></script>
+        <script src="js/dataService.js"></script>
+        <script src="js/customDirective.js"></script>
+  </main>
+</body>
+
 </html>
