@@ -24,7 +24,7 @@ h1 {
 .quote {
   text-align: center;
   font-family: cursive;
-  color: black;
+  color: white;
   font-size: 20px;
 }
 
@@ -55,7 +55,7 @@ input {
 p {
   padding-top: 1em;
   padding-bottom: 1em;
-  /*background: radial-gradient(circle closest-side, grey, transparent);*/
+  background: radial-gradient(closest-side, rgba(0, 84, 80, 0.5), transparent);
 }
 
 .delete-button {
